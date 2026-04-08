@@ -9,74 +9,83 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
       <a class="brand" routerLink="/inicio">Project Vision</a>
 
       <nav class="links" aria-label="Navegación principal">
-        <a routerLink="/inicio" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
+        <a
+          routerLink="/inicio"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Inicio</a
+        >
         <a routerLink="/servicios" routerLinkActive="active">Servicios</a>
         <a routerLink="/contacto" routerLinkActive="active">Contacto</a>
       </nav>
     </header>
   `,
-  styles: [`
-    :host {
-      display: block;
-    }
-
-    .navbar {
-      align-items: center;
-      backdrop-filter: blur(18px);
-      background: rgba(8, 15, 31, 0.78);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      color: #f5f7fb;
-      display: flex;
-      justify-content: space-between;
-      min-height: 4.5rem;
-      padding: 0 1.5rem;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .brand {
-      color: inherit;
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
-
-    .links {
-      display: flex;
-      gap: 1rem;
-
-      a {
-        border-radius: 999px;
-        color: rgba(245, 247, 251, 0.82);
-        padding: 0.55rem 0.95rem;
-        text-decoration: none;
-        transition: background-color 150ms ease, color 150ms ease;
+  styles: [
+    `
+      :host {
+        display: block;
       }
 
-      a:hover,
-      a.active {
-        background: rgba(255, 255, 255, 0.1);
-        color: #ffffff;
-      }
-    }
-
-    @media (max-width: 640px) {
       .navbar {
-        flex-direction: column;
-        gap: 0.75rem;
-        justify-content: center;
-        padding-block: 1rem;
+        align-items: center;
+        backdrop-filter: blur(18px);
+        background: rgba(8, 15, 31, 0.78);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        color: #f5f7fb;
+        display: flex;
+        justify-content: space-between;
+        min-height: 4.5rem;
+        padding: 0 1.5rem;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      .brand {
+        color: inherit;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-decoration: none;
+        text-transform: uppercase;
       }
 
       .links {
-        flex-wrap: wrap;
-        justify-content: center;
+        display: flex;
+        gap: 1rem;
+
+        a {
+          border-radius: 999px;
+          color: rgba(245, 247, 251, 0.82);
+          padding: 0.55rem 0.95rem;
+          text-decoration: none;
+          transition:
+            background-color 150ms ease,
+            color 150ms ease;
+        }
+
+        a:hover,
+        a.active {
+          background: rgba(255, 255, 255, 0.1);
+          color: #ffffff;
+        }
       }
-    }
-  `],
+
+      @media (max-width: 640px) {
+        .navbar {
+          flex-direction: column;
+          gap: 0.75rem;
+          justify-content: center;
+          padding-block: 1rem;
+        }
+
+        .links {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+    `,
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Navbar {}

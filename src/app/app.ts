@@ -11,17 +11,18 @@ import { Navbar } from './components/navbar/navbar';
       <router-outlet />
     </main>
   `,
-  styles: [`
-    :host {
-      display: block;
-      min-height: 100dvh;
-    }
+  styles: [
+    `
+      :host {
+        display: block;
+        min-height: 100dvh;
+      }
 
-    .app-shell {
-      min-height: calc(100dvh - 4.5rem);
-    }
-  `],
+      .app-shell {
+        min-height: calc(100dvh - 4.5rem);
+      }
+    `,
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class App {}
-
