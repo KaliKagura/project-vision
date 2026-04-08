@@ -1,0 +1,19 @@
+<header class="navbar">
+  <a class="brand" routerLink="/inicio">Project Vision</a>
+
+  <nav class="links" aria-label="Navegación principal">
+    <a routerLink="/inicio" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      Inicio
+    </a>
+    <a routerLink="/servicios" routerLinkActive="active">
+      Servicios
+    </a>
+    <a routerLink="/contacto" routerLinkActive="active">
+      Contacto
+    </a>
+  </nav>
+</header>
+
+<main class="app-shell">
+  <router-outlet></router-outlet>
+</main>
