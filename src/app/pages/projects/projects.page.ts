@@ -1,10 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-services-page',
+  selector: 'app-projects-page',
   template: `
     <section class="page">
-      <p class="eyebrow">Servicios</p>
+      <p class="eyebrow">Proyectos</p>
       <h1>Secciones separadas por ruta.</h1>
 
       <div class="cards">
@@ -74,4 +74,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ServicesPage {}
+export class ProjectsPage {}
